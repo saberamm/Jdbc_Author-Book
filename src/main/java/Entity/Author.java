@@ -1,10 +1,13 @@
 package Entity;
 
+import java.util.Arrays;
+
 public class Author {
     int id;
     String name;
     String last_name;
     int age;
+    Book [] book;
 
     public Author(String name, String last_name, int age) {
         this.name = name;
@@ -47,6 +50,18 @@ public class Author {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Book[] getBook() {
+        return book;
+    }
+
+    public void setBook(Book[] book) {
+        this.book = book;
+    }
+
     @Override
     public String toString() {
         return "Author{" +
@@ -54,6 +69,7 @@ public class Author {
                 ", name='" + name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", age=" + age +
+                ", book=" + Arrays.toString(book) +
                 '}';
     }
 }

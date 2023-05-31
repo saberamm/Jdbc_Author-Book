@@ -1,11 +1,19 @@
 package Entity;
 
 public class Book {
+    int id;
     String title;
     int print_year;
     int author_id;
 
     public Book(String title, int print_year, int author_id) {
+        this.title = title;
+        this.print_year = print_year;
+        this.author_id = author_id;
+    }
+
+    public Book(int id, String title, int print_year, int author_id) {
+        this.id = id;
         this.title = title;
         this.print_year = print_year;
         this.author_id = author_id;
@@ -35,10 +43,19 @@ public class Book {
         this.author_id = author_id;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", print_year=" + print_year +
                 ", author_id=" + author_id +
                 '}';
